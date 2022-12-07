@@ -1,10 +1,10 @@
 package vo;
 
 public class etcVO {
-	/* 즐겨찾기 table */
+	/* 즐겨찾기 */
 	private String favorites_user_id;
 	private String favorites_place_number;
-	/* 추천 table */
+	/* 추천 */
 	private String suggestion_user_id;
 	private String suggestion_place_number;
 
