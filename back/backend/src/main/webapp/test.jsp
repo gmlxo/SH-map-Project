@@ -16,10 +16,13 @@
 	test
 
 	<button>test</button>
+	<button>login</button>
+	<button>new member</button>
+
 
 	<button onclick="requestPay()">결제하기</button>
 	------------------------------------------------
-	<script>
+<!-- // <script>
 function requestPay() {
   IMP.init('iamport'); //iamport 대신 자신의 "가맹점 식별코드"를 사용
   IMP.request_pay({
@@ -31,7 +34,7 @@ function requestPay() {
     buyer_email : 'iamport@siot.do',
     buyer_name : '구매자',
     buyer_tel : '010-1234-5678',
-    buyer_addr : '서울특별시 강남구 삼성동',
+    buyer_addr : '경기도 성남시 분당구 서현2',
     buyer_postcode : '123-456'
   }, function (rsp) { // callback
       if (rsp.success) {
@@ -57,7 +60,8 @@ function (rsp) {
       msg += '에러내용 : ' + rsp.error_msg;
       alert(msg);
     }
-  }
-</script>
+  } 
+<script>  
+ -->
 </body>
 </html>
