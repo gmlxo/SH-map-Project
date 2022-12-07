@@ -27,8 +27,9 @@ public class MemberDAO {
 			
 			if(rs.next()) {
 				vo = new MemberVO();
-				vo.setMemberId(rs.getString("member_id"));
-				vo.setMemberPwd(rs.getString("member_pwd"));
+				vo.setuser_id(rs.getString("user_id"));
+				vo.setuser_password(rs.getString("user_password"));
+				vo.setuser_Phone_number(rs.getString("user_Phone_number"));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
