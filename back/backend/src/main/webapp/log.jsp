@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div>
+	<from action="/logServlet" method= "post"> 
+	<button>log</button>
+</div>
 
 </body>
 </html>
