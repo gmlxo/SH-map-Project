@@ -20,7 +20,7 @@ select * from place_tbl_map;
 
 insert into place_tbl_map values('031-704-0704', '효자촌 미래타운 수제돈까스', ' 경기도 성남시 분당구 서현2동 307', '37.373058', '127.137566', '1');
 insert into place_tbl_map values('000-000-0000', '국시 엔 국수', ' 경기도 성남시 분당구 서현동 312-3', ' 37.371743', '127.139374', '1');
-insert into place_tbl_map values('031-729-9400', '청소년 수련관', '경기도 성남시 불정로386번길 38', '37.372176', '127.139918', '4')
+insert into place_tbl_map values('031-729-9400', '청소년 수련관', '경기도 성남시 불정로386번길 38', '37.372176', '127.139918', '4');
 
 
 /* 즐겨찾기 */
@@ -37,7 +37,8 @@ CREATE TABLE suggestion_tbl_map ( -- 누가 어느 가게를 추천 했는지
 
 commit;
 
-DELETE from place_tbl_map ;
-select * from place_tbl_map ;
+-- DELETE from place_tbl_map ;
+select * from place_tbl_map;
+select * from place_tbl_map where place_name like '%돈까스%';
 
 insert into user_tbl_map values ('admin', null, '1234', '010-2909-3042');
