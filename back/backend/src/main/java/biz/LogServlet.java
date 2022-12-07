@@ -10,10 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.MemberDAO;
-import vo.MemberVO;
+import dao.UserDAO;
+import vo.UserVO;
 
-@WebServlet("/LogServlet")
+@WebServlet("/Login")
 public class LogServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -33,15 +33,15 @@ public class LogServlet extends HttpServlet {
 
         UserDAO dao = new UserDAO();
         System.out.println(id);
-        vo = dao.getMemberData(id);
+        
+        vo = dao.login(id);
 
 
-        if(vo == null || !pwd.equals(vo.getMemberPwd())) {
-            out.println("<script> alert('회원정보가 맞지 않습니다'); history.back(); </script>");
+        if(vo == null || !pwd.equals(vo.getUser_password())) {
+            out.println("<script> alert('회원정보가 맞지 않습니다'); history.go(-1); </script>");
         } else {
             HttpSession session = request.getSession();
             session.setAttribute("loginOK", vo);
-            response.sendRedirect("/main.jsp"); 
         }
     }
 }
