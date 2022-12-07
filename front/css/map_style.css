@@ -1,20 +1,43 @@
-.wrapper {
+/* .wrapper {
     width: auto;
     height: auto;
     border: 1px solid red;
+} */
+.box {
+    margin-top: 10px;
+    margin-left: 10px;
     display: flex;
 }
+
 #map {
-    margin-top: 5px;
-    margin-left: 10px;
-    width: 800px;
-    height: 650px;
+    width: 13320px;
+    height: 520px;
     border: 1px solid #000;
+    position: relative;
+    z-index: 1;
 }
-.test {
-    margin-top: 5px;
-    margin-left: 30px;
-    width: 500px;
-    height: 120px;
-    border: 1px solid #000;
+
+.search-box {
+    margin-left: 5px;
+    position: relative;
+    z-index: 999;
 }
+
+.search-box > select {
+    text-align: center;
+    width: 100px; 
+    height: 20px;
+    font-size: 14px;
+}
+
+/* @media only screen and (max-width: 1200px) {
+    #map {
+        width: 700px;
+        border: 1px solid red;
+    }
+    .search-box > select {
+        text-align: center;
+        width: 200px;
+        font-size: 14px;
+    }
+} */

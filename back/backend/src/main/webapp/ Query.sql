@@ -24,7 +24,14 @@ CREATE TABLE favorites_tbl_map ( -- 누가 어느 가게에 즐겨 찾기를 하
 );
 
 /* 추천 */
-CREATE TABLE suggestion_tbl_map ( -- 누가 어느 가게를 추천 했늕
+CREATE TABLE suggestion_tbl_map ( -- 누가 어느 가게를 추천 했는지
     user_id VARCHAR2(20) CONSTRAINT suggestion_user_id_fk REFERENCES user_tbl_map (user_id),
     place_number VARCHAR2(13) CONSTRAINT suggestion_place_id_fk REFERENCES place_tbl_map (place_number)
 );
+
+commit;
+
+DELETE from place_tbl_map ;
+select * from place_tbl_map ;
+
+insert into user_tbl_map values ('admin', null, '1234', '010-2909-3042');
