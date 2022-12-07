@@ -13,11 +13,11 @@ import javax.servlet.http.HttpSession;
 import dao.MemberDAO;
 import vo.MemberVO;
 
-@WebServlet("/LoginServlet")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/LogServlet")
+public class LogServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    public LoginServlet() {
+    public LogServlet() {
         super();
     }
 
@@ -25,13 +25,13 @@ public class LoginServlet extends HttpServlet {
         response.setContentType("text/html; charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
         String id, pwd;
-        MemberVO vo = null;
+        UserVO vo = null;
         PrintWriter out = response.getWriter();
 
         id = request.getParameter("id");
         pwd = request.getParameter("pwd");
 
-        MemberDAO dao = new MemberDAO();
+        UserDAO dao = new UserDAO();
         System.out.println(id);
         vo = dao.getMemberData(id);
 
@@ -41,7 +41,7 @@ public class LoginServlet extends HttpServlet {
         } else {
             HttpSession session = request.getSession();
             session.setAttribute("loginOK", vo);
-            response.sendRedirect("/main.jsp");
+            response.sendRedirect("/main.jsp"); 
         }
     }
 }
