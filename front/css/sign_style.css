@@ -4,10 +4,8 @@
 .wrapper{
 	margin-top: 30px;
 }
-/* .wrapper_up{
-	height: 560px;
-} */
-.login-box,.sign-box {
+
+.sign-box {
 	margin-top: 40px;
     position: absolute;
     top: 50%;
@@ -19,18 +17,18 @@
     border-radius: 10px;
 }
 
-.login-box > h1, .sign-box > h1 {
+.sign-box > h1, .sign-box > h1 {
     margin: 0 0 30px;
     padding: 0;
     color: #000;
     text-align: center;
 }
 
-.login-box-input {
+.sign-box-input {
     position: relative;
 }
 
-.login-box-input > input {
+.sign-box-input > input {
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
@@ -41,7 +39,7 @@
     outline: none;
     background: transparent;
 }
-.login-box-input > label {
+.sign-box-input > label {
     position: absolute;
     top: 0;
     left: 0;
@@ -52,24 +50,24 @@
     transition: .5s;
 }
 
-.login-box-input :focus~label,
-.login-box-input :valid~label,
-.login-box-input :hover~label,
-.login-box-input label:hover {
+.sign-box-input :focus~label,
+.sign-box-input :valid~label,
+.sign-box-input :hover~label,
+.sign-box-input label:hover {
     top: -20px;
     left: 0;
     font-size: 12px;
     transition: .6s;
 }
 
-.login-label > input {
+.sign-label > input {
     padding: 16px 138px;
     font-size: 20px;
     border-radius: 6px;
     background: none;
     color: #000;
 }
-.login-label > #signUp-but{
+.sign-label > #signUp-but{
     padding: 16px 125px;
     font-size: 20px;
     border-radius: 6px;
@@ -77,22 +75,22 @@
     color: #000;
 }
 
-.login-label > input:hover,
-.login-label > #signUp-but:hover{
+.sign-label > input:hover,
+.sign-label > #signUp-but:hover{
     background-color: #000;
     border: 2px solid #000;
     color: #fff;
 }
-.login-label > a{
+.sign-label > a{
     vertical-align: -10px;
     color: rgb(103, 101, 101);
 }
 
-.login-label > a:hover{
+.sign-label > a:hover{
     color: blue;
     text-decoration: underline;
 }
-.login-label > label {
+.sign-label > label {
     vertical-align: -20px;
     color: #000;
 }

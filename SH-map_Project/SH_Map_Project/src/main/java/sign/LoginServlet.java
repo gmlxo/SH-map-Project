@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 import dao.UserDAO;
 import vo.UserVO;
 
-@WebServlet("/Login")
+@WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -31,7 +31,7 @@ public class LoginServlet extends HttpServlet {
 		UserVO vo = null;
 		PrintWriter out = response.getWriter();
 
-		/* login jsp 에서 id, pwd 받아오기 */
+		/* sign in jsp 에서 id, pwd 받아오기 */
 		id = request.getParameter("id");
 		pwd = request.getParameter("pwd");
 
@@ -44,6 +44,7 @@ public class LoginServlet extends HttpServlet {
 		} else {
 			HttpSession session = request.getSession();
 			session.setAttribute("loginOK", vo);
+			request.getRequestDispatcher("/index.jsp").forward(request, response);
 		}
 	}
 }

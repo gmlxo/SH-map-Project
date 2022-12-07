@@ -1,14 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/sign_style.css">
-    <title>Sgin in</title>
+<meta charset="UTF-8">
+<title>Insert title here</title>
 </head>
 <body>
-    <div class="wrapper">
+	<div class="wrapper">
         <div class="sign-box">
             <!-- 로그인 페이지 -->
             <h1>Sign in</h1>
@@ -17,7 +16,6 @@
                     <input type="text" name="id"  required>
                     <label> ID</label>
                 </div>
-                
                 <div class="sign-box-input">
                     <input type="password" name="pwd" required>
                     <label> Password</label>

@@ -1,16 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/sign_style.css">
-    <title>sign up</title>
+<meta charset="UTF-8">
+<title>sign up</title>
 </head>
-
 <body>
-    <div class="wrapper">
+	<div class="wrapper">
         <div class="sign-box">
             <h1>Sign up</h1>
             <!-- 회원가입 페이지 -->
@@ -34,5 +31,5 @@
         </div>
     </div>
 </body>
-
+</body>
 </html>
