@@ -3,6 +3,7 @@
     height: auto;
     border: 1px solid red;
 } */
+
 .box {
     margin-top: 10px;
     margin-left: 10px;
@@ -10,34 +11,40 @@
 }
 
 #map {
-    width: 13320px;
-    height: 520px;
+    width: 1420px;
+    height: 600px;
     border: 1px solid #000;
     position: relative;
     z-index: 1;
 }
 
 .search-box {
+    margin-top: 5px;
+    height: 28px;
+    width: 200px;
+    color: #000;
     margin-left: 5px;
     position: relative;
     z-index: 999;
+    background-color: rgb(171, 120, 120);
+}
+
+.search-box > label {
+    color: #fff;
+    margin-left:  5px;
 }
 
 .search-box > select {
+    margin-top: 2px;
     text-align: center;
-    width: 100px; 
-    height: 20px;
-    font-size: 14px;
+    width: 120px; 
+    height: 23px;
 }
 
-/* @media only screen and (max-width: 1200px) {
+/* ipad 실행용 */
+ @media only screen and (max-width: 1200px) {
     #map {
-        width: 700px;
-        border: 1px solid red;
+        width: 1095px;
+        height: 580px;
     }
-    .search-box > select {
-        text-align: center;
-        width: 200px;
-        font-size: 14px;
-    }
-} */
+}

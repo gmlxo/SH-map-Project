@@ -1,4 +1,4 @@
-<%@page import="java.sql.SQLException"%>
+<!-- <%@page import="java.sql.SQLException"%>
 <%@page import="util.JdbcUtil"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
@@ -15,7 +15,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="./css/order.css">
 <link rel="stylesheet" href="./css/headerCss.css">
-<!-- 토스 페이먼츠 연결 -->
+<!-- 토스 페이먼츠 연결 
 <script src="https://js.tosspayments.com/v1"></script>
 
 <title>Document</title>
@@ -278,3 +278,4 @@
 	<%@ include file="./view/footer.jsp"%>
 </body>
 </html>
+ -->
