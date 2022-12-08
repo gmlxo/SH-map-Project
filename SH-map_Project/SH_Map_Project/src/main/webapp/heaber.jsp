@@ -1,26 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/map_style.css">
-    <title>main page</title>
-    <!-- kakao js 연결 -->
-    <script type="text/javascript"
-        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fe37a9e7ec13e95e1ca860b3ac1845f0"></script>
-    <!-- 부트스트립 css -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <!-- 부트스트립 js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
 </head>
-
 <body>
-    <header class="p-3 mb-3 border-bottom">
+	<header class="p-3 mb-3 border-bottom">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
@@ -55,32 +42,5 @@
             </div>
         </div>
     </header>
-
-    <div class="wrapper">
-        <div class="box">
-            <div id="map">
-                <div class="search-box">
-                    <label>편의시설 : </label>
-                    <select name="" id="">
-                        <option value="0">전체</option>
-                        <option value="1">음식점</option>
-                        <option value="2">마트</option>
-                        <option value="3">놀거리</option>
-                        <option value="4">편의시설</option>
-                    </select>
-                </div>
-            </div>
-            <script>
-                var container = document.getElementById('map');
-                var options = {
-                    // 기본 좌표 설정 _ 양영디지털고등학교
-                    center: new kakao.maps.LatLng(37.373583, 127.140544),
-                    level: 2
-                };
-                var map = new kakao.maps.Map(container, options);
-            </script>
-        </div>
-    </div>
 </body>
-
 </html>

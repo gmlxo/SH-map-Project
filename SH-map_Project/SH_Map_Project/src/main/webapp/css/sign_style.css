@@ -1,0 +1,96 @@
+*{
+    text-decoration: none;
+}
+.wrapper{
+	margin-top: 30px;
+}
+
+.sign-box {
+	margin-top: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -60%);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.sign-box > h1, .sign-box > h1 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #000;
+    text-align: center;
+}
+
+.sign-box-input {
+    position: relative;
+}
+
+.sign-box-input > input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 2px solid #000;
+    outline: none;
+    background: transparent;
+}
+.sign-box-input > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000;
+    pointer-events: 1px #000;
+    transition: .5s;
+}
+
+.sign-box-input :focus~label,
+.sign-box-input :valid~label,
+.sign-box-input :hover~label,
+.sign-box-input label:hover {
+    top: -20px;
+    left: 0;
+    font-size: 12px;
+    transition: .6s;
+}
+
+.sign-label > input {
+    padding: 16px 138px;
+    font-size: 20px;
+    border-radius: 6px;
+    background: none;
+    color: #000;
+}
+.sign-label > #signUp-but{
+    padding: 16px 125px;
+    font-size: 20px;
+    border-radius: 6px;
+    background: none;
+    color: #000;
+}
+
+.sign-label > input:hover,
+.sign-label > #signUp-but:hover{
+    background-color: #000;
+    border: 2px solid #000;
+    color: #fff;
+}
+.sign-label > a{
+    vertical-align: -10px;
+    color: rgb(103, 101, 101);
+}
+
+.sign-label > a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+.sign-label > label {
+    vertical-align: -20px;
+    color: #000;
+}
