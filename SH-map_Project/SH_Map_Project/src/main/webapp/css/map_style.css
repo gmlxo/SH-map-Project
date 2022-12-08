@@ -1,0 +1,50 @@
+/* .wrapper {
+    width: auto;
+    height: auto;
+    border: 1px solid red;
+} */
+
+.box {
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+}
+
+#map {
+    width: 1420px;
+    height: 680px;
+    border: 1px solid #000;
+    position: relative;
+    z-index: 1;
+}
+
+.search-box {
+    margin-top: 5px;
+    height: 28px;
+    width: 200px;
+    color: #000;
+    margin-left: 5px;
+    position: relative;
+    z-index: 999;
+    background-color: rgb(171, 120, 120);
+}
+
+.search-box > label {
+    color: #fff;
+    margin-left:  5px;
+}
+
+.search-box > select {
+    margin-top: 2px;
+    text-align: center;
+    width: 120px; 
+    height: 23px;
+}
+
+/* ipad 실행용 */
+ @media only screen and (max-width: 1200px) {
+    #map {
+        width: 1095px;
+        height: 580px;
+    }
+}
