@@ -6,7 +6,6 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="/css/sign_style.css">
-<link rel="icon" href="/image/IMG_1528.PNG" type="image/x-icon">
 </head>
 <body>
 	<div class="wrapper">

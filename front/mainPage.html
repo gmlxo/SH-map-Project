@@ -11,7 +11,7 @@
     <script type="text/javascript"
         src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fe37a9e7ec13e95e1ca860b3ac1845f0"></script>
     <!-- 부트스트립 css -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!-- 부트스트립 js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -31,16 +31,19 @@
                 </ul>
 
                 <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search" method="get" action="#">
-                    <input type="search" class="form-control" placeholder="Search..." aria-label="Search" name="searchHeadr">
+                    <input type="search" class="form-control" placeholder="Search..." aria-label="Search"
+                        name="searchHeadr">
                 </form>
 
                 <div class="dropdown text-end">
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                          </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                            class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                            <path fill-rule="evenodd"
+                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                        </svg>
                     </a>
                     <ul class="dropdown-menu text-small">
                         <li><a class="dropdown-item" href="#">New project...</a></li>
@@ -61,14 +64,16 @@
             <div id="map">
                 <div class="search-box">
                     <label>편의시설 : </label>
-                    <select name="" id="">
+                    <select name="facilities" id="">
                         <option value="0">전체</option>
                         <option value="1">음식점</option>
-                        <option value="2">마트</option>
-                        <option value="3">놀거리</option>
+                        <option value="2">놀거리</option>
+                        <option value="3">마트</option>
                         <option value="4">편의시설</option>
                     </select>
                 </div>
+
+
             </div>
             <script>
                 var container = document.getElementById('map');
@@ -78,6 +83,76 @@
                     level: 2
                 };
                 var map = new kakao.maps.Map(container, options);
+
+                // var points = [ /* 1 */
+                //     new kakao.maps.LatLng(37.373058, 127.137566),
+                //     new kakao.maps.LatLng(37.371743, 127.139374),
+                //     new kakao.maps.LatLng(37.373933, 127.136649)
+                // ];
+
+                // var points = [ /* 2 */
+                //     new kakao.maps.LatLng(37.386447, 127.125028),
+                //     new kakao.maps.LatLng(37.381382, 127.127924)
+                // ];
+
+                // var points = [ /* 3 */
+                //     new kakao.maps.LatLng(37.374730, 127.136247),
+                //     new kakao.maps.LatLng(37.374270, 127.137186),
+                //     new kakao.maps.LatLng(37.374704, 127.135733)
+                // ]; 
+
+                // var points = [ /* 4 */
+                //     new kakao.maps.LatLng(37.383383, 127.132418),
+                //     new kakao.maps.LatLng(37.382257, 127.126103),
+                //     new kakao.maps.LatLng(37.372176, 127.139918)
+                // ];
+
+                // 지도를 재설정할 범위정보를 가지고 있을 LatLngBounds 객체를 생성합니다
+                var bounds = new kakao.maps.LatLngBounds();
+
+                var i, marker;
+
+                for (i = 0; i < points.length; i++) {
+                    // 배열의 좌표들이 잘 보이게 마커를 지도에 추가합니다
+                    marker = new kakao.maps.Marker({ position: points[i] });
+                    marker.setMap(map);
+
+                    // LatLngBounds 객체에 좌표를 추가합니다
+                    bounds.extend(points[i]);
+                }
+ /*               
+                for (i = 0; i < pointsThingsToDo.length; i++) {
+                    // 배열의 좌표들이 잘 보이게 마커를 지도에 추가합니다
+                    marker = new kakao.maps.Marker({ pointsThingsToDo: pointsThingsToDo[i] });
+                    marker.setMap(map);
+
+                    // LatLngBounds 객체에 좌표를 추가합니다
+                    bounds.extend(pointsThingsToDo[i]);
+                }
+
+                for (i = 0; i < pointsMart.length; i++) {
+                    // 배열의 좌표들이 잘 보이게 마커를 지도에 추가합니다
+                    marker = new kakao.maps.Marker({ pointsMart: pointsMart[i] });
+                    marker.setMap(map);
+
+                    // LatLngBounds 객체에 좌표를 추가합니다
+                    bounds.extend(pointsMart[i]);
+                }
+
+                for (i = 0; i < pointsFacilities.length; i++) {
+                    // 배열의 좌표들이 잘 보이게 마커를 지도에 추가합니다
+                    marker = new kakao.maps.Marker({ pointsFacilities: pointsFacilities[i] });
+                    marker.setMap(map);
+
+                    // LatLngBounds 객체에 좌표를 추가합니다
+                    bounds.extend(pointsMart[i]);
+                }
+ */
+                function setBounds() {
+                    // LatLngBounds 객체에 추가된 좌표들을 기준으로 지도의 범위를 재설정합니다
+                    // 이때 지도의 중심좌표와 레벨이 변경될 수 있습니다
+                    map.setBounds(bounds);
+                }
             </script>
         </div>
     </div>

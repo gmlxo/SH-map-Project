@@ -13,10 +13,10 @@ CREATE TABLE place_tbl_map (
     place_address VARCHAR2(1000) CONSTRAINT place_add_nn not null, -- 가게 주소
     place_latitude VARCHAR2(20) CONSTRAINT place_latitude_nn not null, -- 위도
     place_longitude VARCHAR2(20) CONSTRAINT place_longitude_nn not null, -- 경도
-    place_facilities CHAR(1) -- 1 : 음식점, 2 : 마트, 3 : 놀거리, 4 : 편의시설
+    place_facilities CHAR(1) -- 1 : 음식점, 2 : 놀거리, 3 : 마트, 4 : 편의시설, 기타
 );
 
-select * from place_tbl_map;
+select * from place_tbl_map ORDER by place_facilities ASC;
 
 delete from place_tbl_map where place_number = '000-000-0000';
 
@@ -32,6 +32,7 @@ insert into place_tbl_map values('031-781-8546', '홈플러스 익스프레스',
 insert into place_tbl_map values('031-709-8799', '헐크 볼링장', '경기도 성남시 분당구 서현1동 89-7', '37.381382', '127.127924', '2');
 insert into place_tbl_map values('031-708-7778', '퀸크루즈 노래방', '경기도 성남시 분당구 서현동 248-1', '37.386447', '127.125028', '2');
 
+select * from place_tbl_map;
 
 /* 즐겨찾기 */
 CREATE TABLE favorites_tbl_map ( -- 누가 어느 가게에 즐겨 찾기를 하였는지
