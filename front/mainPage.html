@@ -17,6 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
+    <script src="/js/jquery-3.1.1.js"></script>
 </head>
 
 <body>
@@ -61,100 +62,22 @@
 
     <div class="wrapper">
         <div class="box">
-            <div id="map">
+            <div id="map" >
                 <div class="search-box">
-                    <label>편의시설 : </label>
-                    <select name="facilities" id="">
-                        <option value="0">전체</option>
-                        <option value="1">음식점</option>
-                        <option value="2">놀거리</option>
-                        <option value="3">마트</option>
-                        <option value="4">편의시설</option>
-                    </select>
+                    <form>
+                        <label>편의시설 : </label>
+                        <select name="" id="facilities" onchange="getPoints();">
+                            <option value="0">전체</option>
+                            <option value="1">음식점</option>
+                            <option value="2">놀거리</option>
+                            <option value="3">마트</option>
+                            <option value="4">편의시설</option>
+                        </select>
+                    </form>
                 </div>
-
-
             </div>
-            <script>
-                var container = document.getElementById('map');
-                var options = {
-                    // 기본 좌표 설정 _ 양영디지털고등학교
-                    center: new kakao.maps.LatLng(37.373583, 127.140544),
-                    level: 2
-                };
-                var map = new kakao.maps.Map(container, options);
-
-                // var points = [ /* 1 */
-                //     new kakao.maps.LatLng(37.373058, 127.137566),
-                //     new kakao.maps.LatLng(37.371743, 127.139374),
-                //     new kakao.maps.LatLng(37.373933, 127.136649)
-                // ];
-
-                // var points = [ /* 2 */
-                //     new kakao.maps.LatLng(37.386447, 127.125028),
-                //     new kakao.maps.LatLng(37.381382, 127.127924)
-                // ];
-
-                // var points = [ /* 3 */
-                //     new kakao.maps.LatLng(37.374730, 127.136247),
-                //     new kakao.maps.LatLng(37.374270, 127.137186),
-                //     new kakao.maps.LatLng(37.374704, 127.135733)
-                // ]; 
-
-                // var points = [ /* 4 */
-                //     new kakao.maps.LatLng(37.383383, 127.132418),
-                //     new kakao.maps.LatLng(37.382257, 127.126103),
-                //     new kakao.maps.LatLng(37.372176, 127.139918)
-                // ];
-
-                // 지도를 재설정할 범위정보를 가지고 있을 LatLngBounds 객체를 생성합니다
-                var bounds = new kakao.maps.LatLngBounds();
-
-                var i, marker;
-
-                for (i = 0; i < points.length; i++) {
-                    // 배열의 좌표들이 잘 보이게 마커를 지도에 추가합니다
-                    marker = new kakao.maps.Marker({ position: points[i] });
-                    marker.setMap(map);
-
-                    // LatLngBounds 객체에 좌표를 추가합니다
-                    bounds.extend(points[i]);
-                }
- /*               
-                for (i = 0; i < pointsThingsToDo.length; i++) {
-                    // 배열의 좌표들이 잘 보이게 마커를 지도에 추가합니다
-                    marker = new kakao.maps.Marker({ pointsThingsToDo: pointsThingsToDo[i] });
-                    marker.setMap(map);
-
-                    // LatLngBounds 객체에 좌표를 추가합니다
-                    bounds.extend(pointsThingsToDo[i]);
-                }
-
-                for (i = 0; i < pointsMart.length; i++) {
-                    // 배열의 좌표들이 잘 보이게 마커를 지도에 추가합니다
-                    marker = new kakao.maps.Marker({ pointsMart: pointsMart[i] });
-                    marker.setMap(map);
-
-                    // LatLngBounds 객체에 좌표를 추가합니다
-                    bounds.extend(pointsMart[i]);
-                }
-
-                for (i = 0; i < pointsFacilities.length; i++) {
-                    // 배열의 좌표들이 잘 보이게 마커를 지도에 추가합니다
-                    marker = new kakao.maps.Marker({ pointsFacilities: pointsFacilities[i] });
-                    marker.setMap(map);
-
-                    // LatLngBounds 객체에 좌표를 추가합니다
-                    bounds.extend(pointsMart[i]);
-                }
- */
-                function setBounds() {
-                    // LatLngBounds 객체에 추가된 좌표들을 기준으로 지도의 범위를 재설정합니다
-                    // 이때 지도의 중심좌표와 레벨이 변경될 수 있습니다
-                    map.setBounds(bounds);
-                }
-            </script>
         </div>
+        <!-- <script src="/js/map.js"></script> -->
     </div>
 </body>
 

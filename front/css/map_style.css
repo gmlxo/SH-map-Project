@@ -26,12 +26,12 @@
     background-color: rgb(171, 120, 120);
 }
 
-.search-box > label {
+.search-box > form > label {
     color: #fff;
     margin-left:  5px;
 }
 
-.search-box > select {
+.search-box > form > #facilities {
     margin-top: 2px;
     text-align: center;
     width: 120px; 
