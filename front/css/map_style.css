@@ -1,18 +1,15 @@
-/* .wrapper {
-    width: auto;
-    height: auto;
-    border: 1px solid red;
-} */
 
-.box {
-    margin-top: 10px;
+.box { 
+    width:  calc(100% - 10px);
+    height: calc(100vh - 97px);
+    /* margin-top: 10px; */
     margin-left: 10px;
     display: flex;
 }
 
 #map {
-    width: 1420px;
-    height: 690px;
+    width: 99.5%;
+    height: 100%;
     border: 1px solid #000;
     position: relative;
     z-index: 1;
@@ -39,12 +36,4 @@
     text-align: center;
     width: 120px; 
     height: 23px;
-}
-
-/* ipad 실행용 */
- @media only screen and (max-width: 1200px) {
-    #map {
-        width: 1095px;
-        height: 580px;
-    }
 }
