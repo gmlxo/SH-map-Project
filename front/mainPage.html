@@ -60,21 +60,19 @@
         </div>
     </header>
 
-    <div class="wrapper">
-        <div class="box">
-            <div id="map" > 
-                <div class="search-box">
-                    <form>
-                        <label>편의시설 : </label>
-                        <select name="" id="facilities" onchange="setra();">
-                            <option value="0">전체</option>
-                            <option value="1">음식점</option>
-                            <option value="2">놀거리</option>
-                            <option value="3">마트</option>
-                            <option value="4">편의시설</option>
-                        </select>
-                    </form>
-                </div>
+    <div class="box">
+        <div id="map">
+            <div class="search-box">
+                <form>
+                    <label>편의시설 : </label>
+                    <select name="" id="facilities" onchange="setMarkers();">
+                        <option value="0">전체</option>
+                        <option value="1">음식점</option>
+                        <option value="2">놀거리</option>
+                        <option value="3">마트</option>
+                        <option value="4">편의시설</option>
+                    </select>
+                </form>
             </div>
         </div>
     </div>
